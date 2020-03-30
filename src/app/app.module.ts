@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

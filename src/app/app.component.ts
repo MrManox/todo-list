@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   checkedChanged(todo: Todo): void {
-    this.todoService.update(todo).subscribe(() => this.updateList());
+    this.todoService.update(todo).subscribe();
   }
 
   delete(todo: Todo): void {

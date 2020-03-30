@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Todo } from 'src/model/todo';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoService {
-  constructor() {}
+
+  private static baseUrl = 'http://localhost:3000/api';
+
+  constructor(private http: HttpClient) { }
 
   getTodoList(): Observable<Todo[]> {
-    let val = [];
-    for (let index = 0; index < 20; index++) {
-      val.push({ id: index, task: 'asd asdf asdf asdf', done: true });
-    }
-    return of(val);
+    return this.http.get<Todo[]>(TodoService.baseUrl);
   }
 
   update(todo: Todo): Observable<void> {
-    return of();
+    return this.http.put<void>(TodoService.baseUrl + `/${todo.id}`, todo);
   }
 
   delete(todo: Todo): Observable<void> {
-    return of();
+    return this.http.delete<void>(TodoService.baseUrl + `/${todo.id}`);
   }
 }

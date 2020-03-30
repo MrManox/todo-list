@@ -23,6 +23,7 @@ h1 {
 
 .list-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: .3rem 1rem;
     margin-left: 1.5rem;
