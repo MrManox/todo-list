@@ -9,3 +9,11 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
 }
+
+.mat-checkbox-label {
+  white-space: nowrap !important;
+  overflow-x: hidden !important;
+  text-overflow: ellipsis !important;
+  min-width: 200px;
+  max-width: 200px;
+}

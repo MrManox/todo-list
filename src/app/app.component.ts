@@ -25,6 +25,12 @@ export class AppComponent implements OnInit {
     this.todoService.delete(todo).subscribe(() => this.updateList());
   }
 
+  add(task: string): void {
+    if (task) {
+      this.todoService.new({task, done: false}).subscribe(() => this.updateList());
+    }
+  }
+
   private updateList(): void {
     this.todoList$ = this.todoService.getTodoList();
   }

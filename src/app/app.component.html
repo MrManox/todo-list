@@ -1,11 +1,19 @@
 <div class="wrapper">
     <h1>TODO</h1>
+    <form class="form" (submit)="add(taskInput.value)">
+        <mat-form-field class="form-input">
+            <input #taskInput matInput placeholder="Task">
+        </mat-form-field>
+        <button type="submit" aria-label="add" mat-button>
+            <mat-icon>add</mat-icon>
+        </button>
+    </form>
     <div class="list">
         <div *ngFor="let todo of (todoList$ | async)" class="list-item">
-            <div class="checkbox">
+            <div class="checkbox" [title]="todo.task">
                 <mat-checkbox [(ngModel)]="todo.done" (change)="checkedChanged(todo)">{{todo.task}}</mat-checkbox>
             </div>
-            <button mat-button class="delete" (click)="delete(todo)">
+            <button mat-button class="delete" (click)="delete(todo)" aria-label="delete">
                 <mat-icon>delete</mat-icon>
             </button>
         </div>

@@ -1,39 +1,44 @@
 .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  flex-direction: column;
 }
 
 h1 {
-    text-align: center;
-    font-size: 400%;
+  text-align: center;
+  font-size: 400%;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    max-width: fit-content;
-    min-height: 30rem;
-    max-height: 30rem;
-    overflow-y: auto;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  min-height: 30rem;
+  max-height: 30rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .3rem 1rem;
-    margin-left: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  margin-left: 1.5rem;
 }
 
 .checkbox {
-    display: block;
+  display: block;
 }
 
 .delete {
-    margin-bottom: .3rem;
-    margin-left: 1rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+}
+
+.form-input {
+  min-width: 300px;
+  margin-left: 35px;
 }

@@ -7,10 +7,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class TodoService {
-
   private static baseUrl = 'http://localhost:3000/api';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
+
+  new(todo: {task: string, done: boolean}): Observable<Todo> {
+    return this.http.post<Todo>(TodoService.baseUrl, todo);
+  }
 
   getTodoList(): Observable<Todo[]> {
     return this.http.get<Todo[]>(TodoService.baseUrl);
