@@ -4,9 +4,6 @@ FROM node:12.2.0
 # set working directory
 WORKDIR /app
 
-# copy sources
-COPY /app /app
-
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
